@@ -46,14 +46,14 @@ function makeToken(user) {
   const payload = {
     subject: user.id,
     username: user.username,
-    role: user.role,
   }
   const options = {
-    expiresIn: '60 minutes',
+    expiresIn: '600 seconds',
   }
   return jwt.sign(payload, jwtSecret, options)
 }
 
+// when testing in postman don't copy " " when testing the token in authorization tab in headers
 
 
 module.exports = router;
