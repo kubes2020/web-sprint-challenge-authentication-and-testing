@@ -24,6 +24,6 @@ async function find() {
     return null
 }
 
-async function findBy() {
-    return null
+async function findBy(username) {
+    return db('users').where(username).orderBy('id')
 }
